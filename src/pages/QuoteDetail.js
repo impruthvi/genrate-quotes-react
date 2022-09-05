@@ -34,7 +34,7 @@ const QuoteDetail = () => {
     return <p className="centered focused">{error}</p>;
   }
 
-  if (status === "completed" && (!loadedQuote || loadedQuote.length === 0)) {
+  if (status === "completed" && (loadedQuote || loadedQuote.length === 0)) {
     return <NoQuotesFound />;
   }
 
