@@ -34,12 +34,12 @@ const QuoteDetail = () => {
     return <p className="centered focused">{error}</p>;
   }
 
-  if (status === "completed" && (loadedQuote || loadedQuote.length === 0)) {
+  if (status === "completed" && !loadedQuote.text) {
     return <NoQuotesFound />;
   }
-
-  if(!loadedQuote){
-    return <p>No Quote Found</p>
+ 
+  if (!loadedQuote) {
+    return <p>No Quote Found</p>;
   }
   // const quote = loadedQuote.find((quote) => quote.id === params.quoteId);
 
